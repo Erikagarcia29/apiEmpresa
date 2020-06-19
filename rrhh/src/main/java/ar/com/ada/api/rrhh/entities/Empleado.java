@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 import javax.persistence.*;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "empleado")
@@ -62,8 +62,8 @@ public class Empleado {
     return estadoId;
   }
 
-  public void setEstadoId(int estado) {
-    this.estadoId = estado;
+  public void setEstadoId(int estadoId) {
+    this.estadoId = estadoId;
   }
 
   public Categoria getCategoria() {

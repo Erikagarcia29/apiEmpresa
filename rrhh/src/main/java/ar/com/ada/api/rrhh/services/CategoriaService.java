@@ -32,4 +32,49 @@ public class CategoriaService {
         }
         return listaVacia;
     }
+    public Categoria buscarCategoriaPorId(int categoriaId){
+
+        Optional<Categoria> cOptional = repository.findById(categoriaId);
+
+        if(cOptional.isPresent()){
+
+            return cOptional.get();
+
+        }
+       
+        return null;
+
+    }
+
 }
+
+       
+
+
+
+
+
+
+
+           
+
+
+
+       
+
+
+
+       
+   
+
+
+
+
+
+
+
+
+
+
+    
+
